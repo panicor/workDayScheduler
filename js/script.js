@@ -16,9 +16,8 @@ message.text("Saved to local storage");
 //saves to local storage
 localStorage.setItem("description", time);
 localStorage.setItem("hour", hour);
-
-//hour.appendChild(localSt);
-//$(this).attr("id").appendChild(time);
+//keeps data value on page
+$(this).val(localStorage.getItem("description"));
 
 })
 //evaluation function
@@ -37,19 +36,16 @@ function eval (){
     var hourH = $(this).attr("id");
     //takes "hour" out of id name
     var compH = parseInt(hourH.replace("hour", ""));
-
+    $(".description").val(localStorage.getItem("description"));
     //compares hours
    if (currentH > compH){
        //sets color
     $(this).addClass("past");
    }
 else if (currentH === compH) {
-    $(this).removeClass("past");
     $(this).addClass("present");
 }
 else{
-    $(this).removeClass("past");
-    $(this).removeClass("present");
     $(this).addClass("future");
 }}
    })
@@ -67,18 +63,18 @@ function setDate (){
     setDate();
 
 //keeps data in on refresh
-$("#hour9 .description").val(localStorage.getItem("description"));
-$("#hour10 .description").val(localStorage.getItem("description"));
-$("#hour11 .description").val(localStorage.getItem("description"));
-$("#hour12 .description").val(localStorage.getItem("description"));
-$("#hour13 .description").val(localStorage.getItem("description"));
-$("#hour14 .description").val(localStorage.getItem("description"));
-$("#hour15 .description").val(localStorage.getItem("description"));
-$("#hour16 .description").val(localStorage.getItem("description"));
-$("#hour17 .description").val(localStorage.getItem("description"));
+// $("#hour9 .description").val(localStorage.getItem("description"));
+// $("#hour10 .description").val(localStorage.getItem("description"));
+// $("#hour11 .description").val(localStorage.getItem("description"));
+// $("#hour12 .description").val(localStorage.getItem("description"));
+// $("#hour13 .description").val(localStorage.getItem("description"));
+// $("#hour14 .description").val(localStorage.getItem("description"));
+// $("#hour15 .description").val(localStorage.getItem("description"));
+// $("#hour16 .description").val(localStorage.getItem("description"));
+// $("#hour17 .description").val(localStorage.getItem("description"));
 
 
-//$(this).attr("id").val(localStorage.getItem("description"));
+
 
 })
 
